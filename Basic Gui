@@ -5,23 +5,31 @@
 
 local CringeScript = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local MovementOpenClose = Instance.new("TextButton")
 local Movement = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
 local EToFly = Instance.new("TextButton")
 local SpeedValue = Instance.new("TextBox")
 local SpeedChanger = Instance.new("TextButton")
 local Title_2 = Instance.new("TextLabel")
+local JumpChanger = Instance.new("TextButton")
+local JumpValue = Instance.new("TextBox")
 local GlobalScripts = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
 local Title_3 = Instance.new("TextLabel")
 local InfiniteYield = Instance.new("TextButton")
 local GlobalScriptsOpenClose = Instance.new("TextButton")
+local Games = Instance.new("Frame")
+local Title_4 = Instance.new("TextLabel")
+local GameDetector = Instance.new("TextButton")
+local GamesOpenClose = Instance.new("TextButton")
+local VehicleSimulator = Instance.new("Frame")
+local CloseWindow = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ColorChanger = Instance.new("TextButton")
+local WhereYouTypeTheColor = Instance.new("TextBox")
 local onoff = Instance.new("Frame")
 local OpenCloseButton = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 
 --Properties:
 
@@ -35,10 +43,6 @@ Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.400054306, 0, 0.243529454, 0)
 Main.Size = UDim2.new(0, 295, 0, 436)
-Main.Visible = false
-
-UICorner.CornerRadius = UDim.new(0.0500000007, 0)
-UICorner.Parent = Main
 
 Title.Name = "Title"
 Title.Parent = Main
@@ -66,12 +70,10 @@ MovementOpenClose.TextSize = 14.000
 Movement.Name = "Movement"
 Movement.Parent = Main
 Movement.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Movement.BorderSizePixel = 0
 Movement.Position = UDim2.new(-1.03315425, 0, 0, 0)
 Movement.Size = UDim2.new(0, 304, 0, 435)
 Movement.Visible = false
-
-UICorner_2.CornerRadius = UDim.new(0.0500000007, 0)
-UICorner_2.Parent = Movement
 
 EToFly.Name = "E To Fly"
 EToFly.Parent = Movement
@@ -88,7 +90,7 @@ SpeedValue.Name = "Speed Value"
 SpeedValue.Parent = Movement
 SpeedValue.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SpeedValue.BorderColor3 = Color3.fromRGB(255, 255, 255)
-SpeedValue.Position = UDim2.new(0.168868408, 0, 0.414252818, 0)
+SpeedValue.Position = UDim2.new(0.165578932, 0, 0.726896524, 0)
 SpeedValue.Size = UDim2.new(0, 200, 0, 50)
 SpeedValue.Font = Enum.Font.SourceSans
 SpeedValue.PlaceholderText = "16"
@@ -100,7 +102,7 @@ SpeedChanger.Name = "Speed Changer"
 SpeedChanger.Parent = Movement
 SpeedChanger.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SpeedChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
-SpeedChanger.Position = UDim2.new(0.169090062, 0, 0.300000012, 0)
+SpeedChanger.Position = UDim2.new(0.165800586, 0, 0.612643719, 0)
 SpeedChanger.Size = UDim2.new(0, 200, 0, 50)
 SpeedChanger.Font = Enum.Font.SourceSans
 SpeedChanger.Text = "Set Speed"
@@ -119,15 +121,36 @@ Title_2.Text = "Movement"
 Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_2.TextSize = 14.000
 
+JumpChanger.Name = "Jump Changer"
+JumpChanger.Parent = Movement
+JumpChanger.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+JumpChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+JumpChanger.Position = UDim2.new(0.169090062, 0, 0.29770118, 0)
+JumpChanger.Size = UDim2.new(0, 200, 0, 50)
+JumpChanger.Font = Enum.Font.SourceSans
+JumpChanger.Text = "Set Jump"
+JumpChanger.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpChanger.TextSize = 14.000
+
+JumpValue.Name = "Jump Value"
+JumpValue.Parent = Movement
+JumpValue.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+JumpValue.BorderColor3 = Color3.fromRGB(255, 255, 255)
+JumpValue.Position = UDim2.new(0.168868408, 0, 0.411953986, 0)
+JumpValue.Size = UDim2.new(0, 200, 0, 50)
+JumpValue.Font = Enum.Font.SourceSans
+JumpValue.PlaceholderText = "16"
+JumpValue.Text = ""
+JumpValue.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpValue.TextSize = 14.000
+
 GlobalScripts.Name = "GlobalScripts"
 GlobalScripts.Parent = Main
 GlobalScripts.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-GlobalScripts.Position = UDim2.new(0.997354269, 0, 0.00229357788, 0)
+GlobalScripts.BorderSizePixel = 0
+GlobalScripts.Position = UDim2.new(0.997354269, 0, 0, 0)
 GlobalScripts.Size = UDim2.new(0, 304, 0, 435)
 GlobalScripts.Visible = false
-
-UICorner_3.CornerRadius = UDim.new(0.0500000007, 0)
-UICorner_3.Parent = GlobalScripts
 
 Title_3.Name = "Title"
 Title_3.Parent = GlobalScripts
@@ -156,12 +179,106 @@ GlobalScriptsOpenClose.Name = "GlobalScripts Open/Close"
 GlobalScriptsOpenClose.Parent = Main
 GlobalScriptsOpenClose.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 GlobalScriptsOpenClose.BorderColor3 = Color3.fromRGB(255, 255, 255)
-GlobalScriptsOpenClose.Position = UDim2.new(0.152542368, 0, 0.298165143, 0)
+GlobalScriptsOpenClose.Position = UDim2.new(0.159322023, 0, 0.296000004, 0)
 GlobalScriptsOpenClose.Size = UDim2.new(0, 200, 0, 50)
 GlobalScriptsOpenClose.Font = Enum.Font.SourceSans
 GlobalScriptsOpenClose.Text = "Global Scripts"
 GlobalScriptsOpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
 GlobalScriptsOpenClose.TextSize = 14.000
+
+Games.Name = "Games"
+Games.Parent = Main
+Games.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Games.BorderSizePixel = 0
+Games.Position = UDim2.new(-1.02976441, 0, 0.873853147, 0)
+Games.Size = UDim2.new(0, 903, 0, 143)
+Games.Visible = false
+
+Title_4.Name = "Title"
+Title_4.Parent = Games
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.BorderSizePixel = 0
+Title_4.Position = UDim2.new(0.388274312, 0, -0.00609188527, 0)
+Title_4.Size = UDim2.new(0, 200, 0, 50)
+Title_4.Font = Enum.Font.SourceSans
+Title_4.Text = "Games"
+Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.TextSize = 14.000
+
+GameDetector.Name = "Game Detector"
+GameDetector.Parent = Games
+GameDetector.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GameDetector.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GameDetector.Position = UDim2.new(0.38870433, 0, 0.391608387, 0)
+GameDetector.Size = UDim2.new(0, 200, 0, 50)
+GameDetector.Font = Enum.Font.SourceSans
+GameDetector.Text = "Detect game"
+GameDetector.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameDetector.TextSize = 14.000
+
+GamesOpenClose.Name = "Games Open/Close"
+GamesOpenClose.Parent = Main
+GamesOpenClose.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GamesOpenClose.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GamesOpenClose.Position = UDim2.new(0.159322023, 0, 0.476999998, 0)
+GamesOpenClose.Size = UDim2.new(0, 200, 0, 50)
+GamesOpenClose.Font = Enum.Font.SourceSans
+GamesOpenClose.Text = "Games"
+GamesOpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+GamesOpenClose.TextSize = 14.000
+
+VehicleSimulator.Name = "VehicleSimulator"
+VehicleSimulator.Parent = Main
+VehicleSimulator.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VehicleSimulator.BorderSizePixel = 0
+VehicleSimulator.Position = UDim2.new(-1.03050852, 0, -0.291284382, 0)
+VehicleSimulator.Size = UDim2.new(0, 903, 0, 127)
+VehicleSimulator.Visible = false
+
+CloseWindow.Name = "Close Window"
+CloseWindow.Parent = VehicleSimulator
+CloseWindow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseWindow.BorderColor3 = Color3.fromRGB(255, 255, 255)
+CloseWindow.Position = UDim2.new(0.971868277, 0, 0, 0)
+CloseWindow.Size = UDim2.new(0, 25, 0, 25)
+CloseWindow.Font = Enum.Font.SourceSans
+CloseWindow.Text = "X"
+CloseWindow.TextColor3 = Color3.fromRGB(0, 0, 0)
+CloseWindow.TextSize = 14.000
+
+TextLabel.Parent = VehicleSimulator
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.386489481, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Vehicle Simulator"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+ColorChanger.Name = "Color Changer"
+ColorChanger.Parent = VehicleSimulator
+ColorChanger.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ColorChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ColorChanger.Position = UDim2.new(0.386489481, 0, 0.299212605, 0)
+ColorChanger.Size = UDim2.new(0, 202, 0, 42)
+ColorChanger.Font = Enum.Font.SourceSans
+ColorChanger.Text = "Color Change"
+ColorChanger.TextColor3 = Color3.fromRGB(255, 255, 255)
+ColorChanger.TextSize = 14.000
+
+WhereYouTypeTheColor.Name = "Where You Type The Color"
+WhereYouTypeTheColor.Parent = VehicleSimulator
+WhereYouTypeTheColor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WhereYouTypeTheColor.BorderColor3 = Color3.fromRGB(255, 255, 255)
+WhereYouTypeTheColor.Position = UDim2.new(0.386489481, 0, 0.692913413, 0)
+WhereYouTypeTheColor.Size = UDim2.new(0, 202, 0, 38)
+WhereYouTypeTheColor.Font = Enum.Font.SourceSans
+WhereYouTypeTheColor.PlaceholderText = "Write Color Here"
+WhereYouTypeTheColor.Text = ""
+WhereYouTypeTheColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+WhereYouTypeTheColor.TextSize = 14.000
 
 onoff.Name = "on/off"
 onoff.Parent = CringeScript
@@ -180,12 +297,12 @@ OpenCloseButton.Text = "Show/Hide"
 OpenCloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenCloseButton.TextSize = 14.000
 
-UICorner_4.CornerRadius = UDim.new(100, 0)
-UICorner_4.Parent = OpenCloseButton
+UICorner.CornerRadius = UDim.new(100, 0)
+UICorner.Parent = OpenCloseButton
 
 -- Scripts:
 
-local function KSRWU_fake_script() -- MovementOpenClose.Open/Close 
+local function WBFG_fake_script() -- MovementOpenClose.Open/Close 
 	local script = Instance.new('LocalScript', MovementOpenClose)
 
 	local gui = script.Parent.Parent.Movement
@@ -195,8 +312,8 @@ local function KSRWU_fake_script() -- MovementOpenClose.Open/Close
 	end)
 	
 end
-coroutine.wrap(KSRWU_fake_script)()
-local function QVPOOTA_fake_script() -- EToFly.Fly Script 
+coroutine.wrap(WBFG_fake_script)()
+local function HBLQUPF_fake_script() -- EToFly.Fly Script 
 	local script = Instance.new('LocalScript', EToFly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -282,16 +399,16 @@ local function QVPOOTA_fake_script() -- EToFly.Fly Script
 		Fly()
 	end)
 end
-coroutine.wrap(QVPOOTA_fake_script)()
-local function YQEV_fake_script() -- SpeedValue.Speed Value Changer 
+coroutine.wrap(HBLQUPF_fake_script)()
+local function QYECGE_fake_script() -- SpeedValue.Speed Value Changer 
 	local script = Instance.new('LocalScript', SpeedValue)
 
 	script.Parent.Changed:Connect(function()
 		_G.Speed = script.Parent.Text
 	end)
 end
-coroutine.wrap(YQEV_fake_script)()
-local function FNQDOLW_fake_script() -- SpeedChanger.Speed 
+coroutine.wrap(QYECGE_fake_script)()
+local function MWGNV_fake_script() -- SpeedChanger.Speed 
 	local script = Instance.new('LocalScript', SpeedChanger)
 
 	local plr = game.Players.LocalPlayer
@@ -302,16 +419,36 @@ local function FNQDOLW_fake_script() -- SpeedChanger.Speed
 		hum.WalkSpeed = _G.Speed
 	end)
 end
-coroutine.wrap(FNQDOLW_fake_script)()
-local function OURCO_fake_script() -- InfiniteYield.LocalScript 
+coroutine.wrap(MWGNV_fake_script)()
+local function HCGYB_fake_script() -- JumpChanger.Jump 
+	local script = Instance.new('LocalScript', JumpChanger)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local sp = char:WaitForChild("Humanoid")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		sp.JumpHeight = _G.JumpHeight
+	end)
+end
+coroutine.wrap(HCGYB_fake_script)()
+local function EUCE_fake_script() -- JumpValue.Jump Value Changer 
+	local script = Instance.new('LocalScript', JumpValue)
+
+	script.Parent.Changed:Connect(function()
+		_G.JumpHeight = script.Parent.Text
+	end)
+end
+coroutine.wrap(EUCE_fake_script)()
+local function ERXDX_fake_script() -- InfiniteYield.Infitinte Yield 
 	local script = Instance.new('LocalScript', InfiniteYield)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end)
 end
-coroutine.wrap(OURCO_fake_script)()
-local function MAZGPT_fake_script() -- GlobalScriptsOpenClose.Open/Close 
+coroutine.wrap(ERXDX_fake_script)()
+local function ZHXZ_fake_script() -- GlobalScriptsOpenClose.Open/Close 
 	local script = Instance.new('LocalScript', GlobalScriptsOpenClose)
 
 	local gui = script.Parent.Parent.GlobalScripts
@@ -321,8 +458,64 @@ local function MAZGPT_fake_script() -- GlobalScriptsOpenClose.Open/Close
 	end)
 	
 end
-coroutine.wrap(MAZGPT_fake_script)()
-local function PZCOUO_fake_script() -- OpenCloseButton.Open/Close 
+coroutine.wrap(ZHXZ_fake_script)()
+local function RTBXU_fake_script() -- GameDetector.Game Dectect + Load Script 
+	local script = Instance.new('LocalScript', GameDetector)
+
+	local gui = script.Parent.Parent.VehicleSimulator
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.PlaceId == 171391948 then
+			gui.Visible = not gui.Visible 
+		else
+			print("Game Not Supported")
+		end
+	end)
+end
+coroutine.wrap(RTBXU_fake_script)()
+local function MDUMUL_fake_script() -- GamesOpenClose.Open/Close 
+	local script = Instance.new('LocalScript', GamesOpenClose)
+
+	local gui = script.Parent.Parent.Games
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		gui.Visible = not gui.Visible 
+	end)
+	
+end
+coroutine.wrap(MDUMUL_fake_script)()
+local function NJVS_fake_script() -- CloseWindow.Close 
+	local script = Instance.new('LocalScript', CloseWindow)
+
+	local gui = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		gui.Visible = false
+	end)
+	
+end
+coroutine.wrap(NJVS_fake_script)()
+local function VNXTLT_fake_script() -- ColorChanger.Color Changer 
+	local script = Instance.new('LocalScript', ColorChanger)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		print("Making Map",_G.NewMapColor)
+	--	for _,v in pairs(workspace:GetDescendants()) do
+	--		if v:IsA("BasePart") then
+	--			game.ReplicatedStorage.Simchassis.RemoteEvents.Lights:FireServer({Name = 'HeadLight',Parent = v},'HeadLight',true,BrickColor.new(_G.NewMapColor).Color)
+	--		end
+	--	end
+	end)
+end
+coroutine.wrap(VNXTLT_fake_script)()
+local function DDOQ_fake_script() -- WhereYouTypeTheColor.Type Color 
+	local script = Instance.new('LocalScript', WhereYouTypeTheColor)
+
+	script.Parent.Changed:Connect(function()
+		_G.NewMapColor = script.Parent.Text
+	end)
+end
+coroutine.wrap(DDOQ_fake_script)()
+local function YMTV_fake_script() -- OpenCloseButton.Open/Close 
 	local script = Instance.new('LocalScript', OpenCloseButton)
 
 	local gui = script.Parent.Parent.Parent.Main
@@ -332,4 +525,4 @@ local function PZCOUO_fake_script() -- OpenCloseButton.Open/Close
 	end)
 	
 end
-coroutine.wrap(PZCOUO_fake_script)()
+coroutine.wrap(YMTV_fake_script)()
