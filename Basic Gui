@@ -14,9 +14,14 @@ local EToFly = Instance.new("TextButton")
 local SpeedValue = Instance.new("TextBox")
 local SpeedChanger = Instance.new("TextButton")
 local Title_2 = Instance.new("TextLabel")
+local GlobalScripts = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Title_3 = Instance.new("TextLabel")
+local InfiniteYield = Instance.new("TextButton")
+local GlobalScriptsOpenClose = Instance.new("TextButton")
 local onoff = Instance.new("Frame")
 local OpenCloseButton = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
@@ -28,7 +33,7 @@ Main.Name = "Main"
 Main.Parent = CringeScript
 Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.400054306, 0, 0.243529439, 0)
+Main.Position = UDim2.new(0.400054306, 0, 0.243529454, 0)
 Main.Size = UDim2.new(0, 295, 0, 436)
 Main.Visible = false
 
@@ -61,7 +66,7 @@ MovementOpenClose.TextSize = 14.000
 Movement.Name = "Movement"
 Movement.Parent = Main
 Movement.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Movement.Position = UDim2.new(-1.03315425, 0, -0.00300049502, 0)
+Movement.Position = UDim2.new(-1.03315425, 0, 0, 0)
 Movement.Size = UDim2.new(0, 304, 0, 435)
 Movement.Visible = false
 
@@ -114,6 +119,50 @@ Title_2.Text = "Movement"
 Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_2.TextSize = 14.000
 
+GlobalScripts.Name = "GlobalScripts"
+GlobalScripts.Parent = Main
+GlobalScripts.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GlobalScripts.Position = UDim2.new(0.997354269, 0, 0.00229357788, 0)
+GlobalScripts.Size = UDim2.new(0, 304, 0, 435)
+GlobalScripts.Visible = false
+
+UICorner_3.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_3.Parent = GlobalScripts
+
+Title_3.Name = "Title"
+Title_3.Parent = GlobalScripts
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.BorderSizePixel = 0
+Title_3.Position = UDim2.new(0.1690052, 0, 0.000901121646, 0)
+Title_3.Size = UDim2.new(0, 200, 0, 50)
+Title_3.Font = Enum.Font.SourceSans
+Title_3.Text = "Global Scripts"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 14.000
+
+InfiniteYield.Name = "Infinite Yield"
+InfiniteYield.Parent = GlobalScripts
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.BorderColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.Position = UDim2.new(0.167763159, 0, 0.10804598, 0)
+InfiniteYield.Size = UDim2.new(0, 200, 0, 50)
+InfiniteYield.Font = Enum.Font.SourceSans
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.TextSize = 14.000
+
+GlobalScriptsOpenClose.Name = "GlobalScripts Open/Close"
+GlobalScriptsOpenClose.Parent = Main
+GlobalScriptsOpenClose.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GlobalScriptsOpenClose.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GlobalScriptsOpenClose.Position = UDim2.new(0.152542368, 0, 0.298165143, 0)
+GlobalScriptsOpenClose.Size = UDim2.new(0, 200, 0, 50)
+GlobalScriptsOpenClose.Font = Enum.Font.SourceSans
+GlobalScriptsOpenClose.Text = "Global Scripts"
+GlobalScriptsOpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+GlobalScriptsOpenClose.TextSize = 14.000
+
 onoff.Name = "on/off"
 onoff.Parent = CringeScript
 onoff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -131,12 +180,12 @@ OpenCloseButton.Text = "Show/Hide"
 OpenCloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenCloseButton.TextSize = 14.000
 
-UICorner_3.CornerRadius = UDim.new(100, 0)
-UICorner_3.Parent = OpenCloseButton
+UICorner_4.CornerRadius = UDim.new(100, 0)
+UICorner_4.Parent = OpenCloseButton
 
 -- Scripts:
 
-local function HIYNP_fake_script() -- MovementOpenClose.Open/Close 
+local function KSRWU_fake_script() -- MovementOpenClose.Open/Close 
 	local script = Instance.new('LocalScript', MovementOpenClose)
 
 	local gui = script.Parent.Parent.Movement
@@ -146,8 +195,8 @@ local function HIYNP_fake_script() -- MovementOpenClose.Open/Close
 	end)
 	
 end
-coroutine.wrap(HIYNP_fake_script)()
-local function DRVFO_fake_script() -- EToFly.Fly Script 
+coroutine.wrap(KSRWU_fake_script)()
+local function QVPOOTA_fake_script() -- EToFly.Fly Script 
 	local script = Instance.new('LocalScript', EToFly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -233,16 +282,16 @@ local function DRVFO_fake_script() -- EToFly.Fly Script
 		Fly()
 	end)
 end
-coroutine.wrap(DRVFO_fake_script)()
-local function QWSZ_fake_script() -- SpeedValue.Speed Value Changer 
+coroutine.wrap(QVPOOTA_fake_script)()
+local function YQEV_fake_script() -- SpeedValue.Speed Value Changer 
 	local script = Instance.new('LocalScript', SpeedValue)
 
 	script.Parent.Changed:Connect(function()
 		_G.Speed = script.Parent.Text
 	end)
 end
-coroutine.wrap(QWSZ_fake_script)()
-local function BIUYJZ_fake_script() -- SpeedChanger.Speed 
+coroutine.wrap(YQEV_fake_script)()
+local function FNQDOLW_fake_script() -- SpeedChanger.Speed 
 	local script = Instance.new('LocalScript', SpeedChanger)
 
 	local plr = game.Players.LocalPlayer
@@ -253,8 +302,27 @@ local function BIUYJZ_fake_script() -- SpeedChanger.Speed
 		hum.WalkSpeed = _G.Speed
 	end)
 end
-coroutine.wrap(BIUYJZ_fake_script)()
-local function QIDTCLB_fake_script() -- OpenCloseButton.Open/Close 
+coroutine.wrap(FNQDOLW_fake_script)()
+local function OURCO_fake_script() -- InfiniteYield.LocalScript 
+	local script = Instance.new('LocalScript', InfiniteYield)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	end)
+end
+coroutine.wrap(OURCO_fake_script)()
+local function MAZGPT_fake_script() -- GlobalScriptsOpenClose.Open/Close 
+	local script = Instance.new('LocalScript', GlobalScriptsOpenClose)
+
+	local gui = script.Parent.Parent.GlobalScripts
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		gui.Visible = not gui.Visible 
+	end)
+	
+end
+coroutine.wrap(MAZGPT_fake_script)()
+local function PZCOUO_fake_script() -- OpenCloseButton.Open/Close 
 	local script = Instance.new('LocalScript', OpenCloseButton)
 
 	local gui = script.Parent.Parent.Parent.Main
@@ -264,4 +332,4 @@ local function QIDTCLB_fake_script() -- OpenCloseButton.Open/Close
 	end)
 	
 end
-coroutine.wrap(QIDTCLB_fake_script)()
+coroutine.wrap(PZCOUO_fake_script)()
