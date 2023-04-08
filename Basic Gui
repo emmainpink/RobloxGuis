@@ -1,0 +1,267 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local CringeScript = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local MovementOpenClose = Instance.new("TextButton")
+local Movement = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local EToFly = Instance.new("TextButton")
+local SpeedValue = Instance.new("TextBox")
+local SpeedChanger = Instance.new("TextButton")
+local Title_2 = Instance.new("TextLabel")
+local onoff = Instance.new("Frame")
+local OpenCloseButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+
+--Properties:
+
+CringeScript.Name = "Cringe Script"
+CringeScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CringeScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = CringeScript
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.400054306, 0, 0.243529439, 0)
+Main.Size = UDim2.new(0, 295, 0, 436)
+Main.Visible = false
+
+UICorner.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner.Parent = Main
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.155847311, 0, -0.00139772892, 0)
+Title.Size = UDim2.new(0, 200, 0, 50)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Basic Script GUI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+MovementOpenClose.Name = "Movement Open/Close"
+MovementOpenClose.Parent = Main
+MovementOpenClose.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MovementOpenClose.BorderColor3 = Color3.fromRGB(255, 255, 255)
+MovementOpenClose.Position = UDim2.new(0.159322038, 0, 0.114678897, 0)
+MovementOpenClose.Size = UDim2.new(0, 200, 0, 50)
+MovementOpenClose.Font = Enum.Font.SourceSans
+MovementOpenClose.Text = "Movement"
+MovementOpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+MovementOpenClose.TextSize = 14.000
+
+Movement.Name = "Movement"
+Movement.Parent = Main
+Movement.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Movement.Position = UDim2.new(-1.03315425, 0, -0.00300049502, 0)
+Movement.Size = UDim2.new(0, 304, 0, 435)
+Movement.Visible = false
+
+UICorner_2.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_2.Parent = Movement
+
+EToFly.Name = "E To Fly"
+EToFly.Parent = Movement
+EToFly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+EToFly.BorderColor3 = Color3.fromRGB(255, 255, 255)
+EToFly.Position = UDim2.new(0.169090092, 0, 0.112000003, 0)
+EToFly.Size = UDim2.new(0, 200, 0, 50)
+EToFly.Font = Enum.Font.SourceSans
+EToFly.Text = "E To Fly"
+EToFly.TextColor3 = Color3.fromRGB(255, 255, 255)
+EToFly.TextSize = 14.000
+
+SpeedValue.Name = "Speed Value"
+SpeedValue.Parent = Movement
+SpeedValue.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpeedValue.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SpeedValue.Position = UDim2.new(0.168868408, 0, 0.414252818, 0)
+SpeedValue.Size = UDim2.new(0, 200, 0, 50)
+SpeedValue.Font = Enum.Font.SourceSans
+SpeedValue.PlaceholderText = "16"
+SpeedValue.Text = ""
+SpeedValue.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedValue.TextSize = 14.000
+
+SpeedChanger.Name = "Speed Changer"
+SpeedChanger.Parent = Movement
+SpeedChanger.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpeedChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChanger.Position = UDim2.new(0.169090062, 0, 0.300000012, 0)
+SpeedChanger.Size = UDim2.new(0, 200, 0, 50)
+SpeedChanger.Font = Enum.Font.SourceSans
+SpeedChanger.Text = "Set Speed"
+SpeedChanger.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChanger.TextSize = 14.000
+
+Title_2.Name = "Title"
+Title_2.Parent = Movement
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderSizePixel = 0
+Title_2.Position = UDim2.new(0.1690052, 0, 0.000901121646, 0)
+Title_2.Size = UDim2.new(0, 200, 0, 50)
+Title_2.Font = Enum.Font.SourceSans
+Title_2.Text = "Movement"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 14.000
+
+onoff.Name = "on/off"
+onoff.Parent = CringeScript
+onoff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+onoff.BackgroundTransparency = 1.000
+onoff.Position = UDim2.new(0.927604854, 0, 0.419999987, 0)
+onoff.Size = UDim2.new(0, 107, 0, 135)
+
+OpenCloseButton.Name = "Open/Close Button"
+OpenCloseButton.Parent = onoff
+OpenCloseButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenCloseButton.Position = UDim2.new(0.0283486843, 0, 0.12865442, 0)
+OpenCloseButton.Size = UDim2.new(0, 100, 0, 100)
+OpenCloseButton.Font = Enum.Font.SourceSans
+OpenCloseButton.Text = "Show/Hide"
+OpenCloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenCloseButton.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(100, 0)
+UICorner_3.Parent = OpenCloseButton
+
+-- Scripts:
+
+local function HIYNP_fake_script() -- MovementOpenClose.Open/Close 
+	local script = Instance.new('LocalScript', MovementOpenClose)
+
+	local gui = script.Parent.Parent.Movement
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		gui.Visible = not gui.Visible 
+	end)
+	
+end
+coroutine.wrap(HIYNP_fake_script)()
+local function DRVFO_fake_script() -- EToFly.Fly Script 
+	local script = Instance.new('LocalScript', EToFly)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		repeat wait() 
+		until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+		local mouse = game.Players.LocalPlayer:GetMouse() 
+		repeat wait() until mouse
+		local plr = game.Players.LocalPlayer 
+		local torso = plr.Character.HumanoidRootPart 
+		local flying = true
+		local deb = true 
+		local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		local maxspeed = 50 
+		local speed = 0 
+	
+		function Fly() 
+			local bg = Instance.new("BodyGyro", torso) 
+			bg.P = 9e4 
+			bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+			bg.cframe = torso.CFrame 
+			local bv = Instance.new("BodyVelocity", torso) 
+			bv.velocity = Vector3.new(0,0.1,0) 
+			bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+			repeat wait() 
+				plr.Character.Humanoid.PlatformStand = true 
+				if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+					speed = speed+.5+(speed/maxspeed) 
+					if speed > maxspeed then 
+						speed = maxspeed 
+					end 
+				elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+					speed = speed-1 
+					if speed < 0 then 
+						speed = 0 
+					end 
+				end 
+				if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+					lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+				elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+				else 
+					bv.velocity = Vector3.new(0,0.1,0) 
+				end 
+				bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+			until not flying 
+			ctrl = {f = 0, b = 0, l = 0, r = 0} 
+			lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+			speed = 0 
+			bg:Destroy() 
+			bv:Destroy() 
+			plr.Character.Humanoid.PlatformStand = false 
+		end 
+		mouse.KeyDown:connect(function(key) 
+			if key:lower() == "e" then 
+				if flying then flying = false 
+				else 
+					flying = true 
+					Fly() 
+				end 
+			elseif key:lower() == "w" then 
+				ctrl.f = 1 
+			elseif key:lower() == "s" then 
+				ctrl.b = -1 
+			elseif key:lower() == "a" then 
+				ctrl.l = -1 
+			elseif key:lower() == "d" then 
+				ctrl.r = 1 
+			end 
+		end) 
+		mouse.KeyUp:connect(function(key) 
+			if key:lower() == "w" then 
+				ctrl.f = 0 
+			elseif key:lower() == "s" then 
+				ctrl.b = 0 
+			elseif key:lower() == "a" then 
+				ctrl.l = 0 
+			elseif key:lower() == "d" then 
+				ctrl.r = 0 
+			end 
+		end)
+		Fly()
+	end)
+end
+coroutine.wrap(DRVFO_fake_script)()
+local function QWSZ_fake_script() -- SpeedValue.Speed Value Changer 
+	local script = Instance.new('LocalScript', SpeedValue)
+
+	script.Parent.Changed:Connect(function()
+		_G.Speed = script.Parent.Text
+	end)
+end
+coroutine.wrap(QWSZ_fake_script)()
+local function BIUYJZ_fake_script() -- SpeedChanger.Speed 
+	local script = Instance.new('LocalScript', SpeedChanger)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:WaitForChild("Humanoid")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hum.WalkSpeed = _G.Speed
+	end)
+end
+coroutine.wrap(BIUYJZ_fake_script)()
+local function QIDTCLB_fake_script() -- OpenCloseButton.Open/Close 
+	local script = Instance.new('LocalScript', OpenCloseButton)
+
+	local gui = script.Parent.Parent.Parent.Main
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		gui.Visible = not gui.Visible 
+	end)
+	
+end
+coroutine.wrap(QIDTCLB_fake_script)()
